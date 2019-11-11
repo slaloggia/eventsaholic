@@ -1,0 +1,21 @@
+Clients:
+    - Can log in/create new client/delete self
+    - Can create events by venue & date
+    - Can update approved events with vendors
+    - Show page available when logged in with upcoming & past events
+    - profile update?
+
+Venues:
+    - Index page with all venues, filterable/searchable by location, type, capacity
+    - Show page with details, recent events, reviews, request form(?), photos(?)
+    STRETCH
+    - separate create/log-in, can approve events requested by Clients
+
+Vendors:
+    - Index page, filterable by category
+    - Show page
+
+Events
+    - Show page w/ review form, photos(?)
+    - form partial for creation/update(available to logged-in client)/delete
+    - new event request page(?)
