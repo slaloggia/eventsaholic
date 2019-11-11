@@ -1,0 +1,12 @@
+<%# add local variable for logged-in client id %>
+<%# render on venue page with local variable for venue_id? %>
+
+<%= form_with model: @event do |f|%>
+<%= f.label "Event Title" %>
+<%= f.text_field :title %><br>
+<%= f.label "Venue" %>
+<%= f.collection_select :venue_id, Venue.all, :id, :name %><br>
+<%= f.label :date %>
+<%= f.date_select(:date) %><br>
+<%= f.submit %>
+<% end %>
