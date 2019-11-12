@@ -1,14 +1,14 @@
 <%= form_with model: @client do |f| %>
-  <%= f.label "First Name" %>
-  <%= f.text_field :first_name %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %><br>
   
-  <%= f.label "Last Name" %>
-  <%= f.text_field :last_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %><br>
 
-  <%= f.label "Location" %>
-  <%= f.text_field :location %>
+  <%= f.label :location %>
+  <%= f.text_field :location %><br>
 
-  <%= f.label "Username %>
-  <%= f.text_field :username %>
+  <%= f.label :username %>
+  <%= f.text_field :username %><br>
 
 <% end %>
