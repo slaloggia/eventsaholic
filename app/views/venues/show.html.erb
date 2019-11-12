@@ -1,0 +1,18 @@
+<h1><%= @venue.name %></h1>
+<p>Type: <%= @venue.type %></p>
+<p>Capacity: <%= @venue.capacity %></p>
+<p>Location: <%= @venue.location %></p> 
+<br>
+<br>
+<h3>Recent events:</h3>
+    <ul>
+    <% @venue.events.each do |event| %>
+        <li><%= link_to event.title, event_path(event)%></li>
+    <% end %>
+    </ul>
+
+<h3>Book an event:</h3>
+<%= render "form" %>
+
+
+

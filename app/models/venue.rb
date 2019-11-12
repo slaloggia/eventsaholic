@@ -6,6 +6,6 @@ class Venue < ApplicationRecord
 
 
     def self.search(search)
-        @venue = Venue.where("capacity > ?", search)
+        Venue.where("capacity > ?", search)
     end
 end
