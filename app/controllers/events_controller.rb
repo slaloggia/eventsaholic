@@ -10,7 +10,7 @@ before_action :set_event, only: [:show, :edit, :update]
         if @event.save
             redirect_to @event
         else
-            # flash error messages?
+            flash[:errors] = @event.errors.full_messages
             redirect_to new_event_path
         end
     end
