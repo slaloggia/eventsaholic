@@ -1,1 +1,8 @@
 <h1>Vendors</h1>
+<br>
+<%# search by category %>
+
+<% @vendors.each do |vendor| %>
+<%= link_to vendor.name, show_vendor_path(vendor) %><br>
+<% end %>
+

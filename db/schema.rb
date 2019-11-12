@@ -10,14 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_11_202615) do
+ActiveRecord::Schema.define(version: 2019_11_12_165953) do
 
   create_table "clients", force: :cascade do |t|
     t.string "username"
     t.string "first_name"
     t.string "last_name"
     t.string "location"
-    t.boolean "business", default: false
+    t.boolean "business"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "event_vendors", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "vendor_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -44,7 +51,6 @@ ActiveRecord::Schema.define(version: 2019_11_11_202615) do
   create_table "vendors", force: :cascade do |t|
     t.string "name"
     t.string "category"
-    t.integer "event_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
