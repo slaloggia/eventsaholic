@@ -6,13 +6,13 @@
 <br>
 <h3>Recent events:</h3>
     <ul>
-    <% @venue.events.each do |event| %>
+    <% @venue.latest_events.each do |event| %>
         <li><%= link_to event.title, event_path(event)%></li>
     <% end %>
     </ul>
 
 <h3>Book an event:</h3>
-<%= render "form" %>
+
 
 
 

@@ -12,4 +12,8 @@ class Venue < ApplicationRecord
     def featured_venue
         self.events.max_by{|event| event.reviews.count}
     end
+
+    def latest_events
+        self.events.last(10)
+    end
 end
