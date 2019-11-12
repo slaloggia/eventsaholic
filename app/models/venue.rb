@@ -13,7 +13,20 @@ class Venue < ApplicationRecord
         self.events.max_by{|event| event.reviews.count}
     end
 
-    def latest_events
-        self.events.last(10)
+    def self.logan
+        Venue.where(location: "Logan Square")
     end
+
+    def self.river
+        Venue.where(location: "River North")
+    end
+
+    def self.west
+        Venue.where(location: "West Side")
+    end
+
+    def latest_events
+        self.events.limit(10)
+    end
+
 end

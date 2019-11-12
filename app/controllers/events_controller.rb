@@ -6,7 +6,7 @@ before_action :set_event, only: [:show, :edit, :update]
     end
 
     def create
-        @event = Event.new(event_params)
+        @event = Event.new(params.require(:event).permit(:client_id, :venue_id, :title, :event_type, :date, :approved))
         if @event.save
             redirect_to @event
         else
@@ -22,10 +22,10 @@ before_action :set_event, only: [:show, :edit, :update]
     end
 
     def update
-        if @event.update(event_params)
+        if @event.update(params.require(:event).permit(:title, :event_type, :date, :approved))
             redirect_to @event
         else
-            # flash error messages?
+            flash[:errors] = @event.errors.full_messages
             redirect_to edit_event_path
         end
     end
@@ -33,7 +33,7 @@ before_action :set_event, only: [:show, :edit, :update]
     private
 
     def event_params
-        params.require(:event).permit(:client_id, :venue_id, :title, :type, :date, :approved)
+        params.require(:event).permit(:client_id, :venue_id, :title, :event_type, :date, :approved)
     end
 
     def set_event

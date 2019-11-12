@@ -1,0 +1,11 @@
+<h1>Edit Your Event</h1>
+<% if flash[:errors] %>
+    <% flash[:errors].each do |err| %>
+    <b>*<%= err %>*</b><br>
+    <% end %>
+<% end %>
+
+<%= render 'form' %>
+<br>
+<br>
+<h3>Add Vendors</h3>

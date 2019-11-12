@@ -6,8 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+
+locations = ["Logan Square", "River North", "West Side"]
+
 10.times do
-Client.create(username: Faker::Twitter.screen_name, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
+Client.create(username: Faker::Twitter.screen_name, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: locations.sample)
 end
 
 Venue.create(name: "Logan Bar", location:'Logan Square' , capacity: 100 , venue_type: "Bar")
@@ -35,6 +38,8 @@ Vendor.create(name: "A Posh Production", category: 'Decor')
 Vendor.create(name: "Art Of Imagination", category: "Decor")
 Vendor.create(name: "Revel Decor", category: "Decor")
 
-puts "SEEDED"
+Event.create(title:"Rosemarie's Wedding" , client_id: 1, venue_id: 5, event_type:"wedding" , date: 25/05/2020 )
+Event.create(title:"Dan's Bachellor Party" , client_id: 5, venue_id: 10, event_type:"bachellor party" , date: 15/02/2020, approved: true)
+Event.create(title:"Rina's Birthday Party" , client_id: 9, venue_id: 8, event_type:"birthday party" , date: 21/01/2020, approved: true )
 
 
