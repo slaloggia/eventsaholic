@@ -6,8 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+
+locations = ["Logan Square", "River North", "West Side"]
+
 10.times do
-Client.create(username: Faker::Twitter.screen_name, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
+Client.create(username: Faker::Twitter.screen_name, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, location: locations.sample)
 end
 
 Venue.create(name: "Logan Bar", location:'Logan Square' , capacity: 100 , venue_type: "Bar")
