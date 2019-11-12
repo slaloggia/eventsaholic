@@ -1,4 +1,4 @@
-<h1>Venues by location: </h1>
+<h1>Featured Venues</h1>
 
 <h3>Venues in Logan Square:</h3>
 <ul>
@@ -21,7 +21,7 @@
 <% end %>
 </ul>
 
-Featured Venue: <%= @venue.featured_venue %>
+<p>Popular Venue: <%= @venue.featured_venue %> </p>
 
 <%= form_tag(venues_path, method: :get) do %>
 <p>Search venue by capacity: </p>
