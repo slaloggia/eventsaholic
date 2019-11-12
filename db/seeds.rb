@@ -21,3 +21,18 @@ Venue.create(name: 'Disco' , location:"River North"  , capacity: 310 , type:"Clu
 Venue.create(name: "Au Cheval", location: "West Side" , capacity: 260, type: "Restaurant" )
 Venue.create(name: 'The Aviary', location: "West Side" , capacity: 150, type: "Bar")
 Venue.create(name: "Formento's", location: "West Side" , capacity: 270, type: "Restaurant")
+
+
+
+Vendor.create(name: "Ezcater", category: "Catering")
+Vendor.create(name: "Zerocater", category: "Catering")
+Vendor.create(name: "Blue Plate", category: "Catering")
+Vendor.create(name: "J&L Catering", category: 'Catering')
+Vendor.create(name: "Large Music", category: "Music")
+Vendor.create(name: "Trala", category: "Music")
+Vendor.create(name: "Geartrack", category: "Music")
+Vendor.create(name: "A Posh Production", category: 'Decor')
+Vendor.create(name: "Art Of Imagination", category: "Decor")
+Vendor.create(name: "Revel Decor", category: "Decor")
+
+
