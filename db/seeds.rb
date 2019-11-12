@@ -35,4 +35,6 @@ Vendor.create(name: "A Posh Production", category: 'Decor')
 Vendor.create(name: "Art Of Imagination", category: "Decor")
 Vendor.create(name: "Revel Decor", category: "Decor")
 
+puts "SEEDED"
+
 
