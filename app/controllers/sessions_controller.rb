@@ -10,5 +10,7 @@ class SessionsController < ApplicationController
   end
 
   def delete
+    session.delete(:client_id)
+    redirect_to login_path
   end
 end
