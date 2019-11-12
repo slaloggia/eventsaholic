@@ -4,4 +4,5 @@ class Event < ApplicationRecord
     has_many :reviews
     has_many :event_vendors
     has_many :vendors, through: :event_vendors
+    validates :title, presence: true
 end
