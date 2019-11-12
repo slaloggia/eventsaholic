@@ -1,0 +1,15 @@
+<h1>Venues:</h1>
+
+<ul>
+<% @venues.each do |venue| %>
+<li><%= link_to venue.name, venue_path(venue) %></li>
+<% end %>
+</ul>
+
+Featured Venue: <%= @venue.featured_venue %>
+
+<%= form_tag(venues_path, method: :get) do %>
+<p>Search venue by capacity: </p>
+<%= text_field_tag(:search, params[:search]) %>
+<%= submit_tag "Search", name: nil %>
+<% end %>
