@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_11_12_165953) do
     t.string "first_name"
     t.string "last_name"
     t.string "location"
-    t.boolean "business"
+    t.boolean "business", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
