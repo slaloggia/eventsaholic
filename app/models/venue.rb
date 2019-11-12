@@ -25,4 +25,8 @@ class Venue < ApplicationRecord
         Venue.where(location: "West Side")
     end
 
+    def latest_events
+        self.events.limit(10)
+    end
+
 end
