@@ -35,6 +35,8 @@ Vendor.create(name: "A Posh Production", category: 'Decor')
 Vendor.create(name: "Art Of Imagination", category: "Decor")
 Vendor.create(name: "Revel Decor", category: "Decor")
 
-puts "SEEDED"
+Event.create(title:"Rosemarie's Wedding" , client_id: 1, venue_id: 5, event_type:"wedding" , date: 25/05/2020 )
+Event.create(title:"Dan's Bachellor party" , client_id: 5, venue_id: 5, event_type:"bachellor party" , date: 15/02/2020 )
+
 
 
