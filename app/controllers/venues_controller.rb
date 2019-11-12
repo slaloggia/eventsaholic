@@ -2,6 +2,7 @@ class VenuesController < ApplicationController
     before_action :find_venue, only: [:show]
 
     def index
+        @venue = Venue.new
         if params[:search]
             @venues = Venue.search(params[:search])
           else

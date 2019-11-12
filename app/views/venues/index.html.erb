@@ -6,7 +6,10 @@
 <% end %>
 </ul>
 
+Featured Venue: <%= @venue.featured_venue %>
+
 <%= form_tag(venues_path, method: :get) do %>
-<p>Search venue by capacity: <%= text_field_tag(:search, params[:search]) %> </p>
+<p>Search venue by capacity: </p>
+<%= text_field_tag(:search, params[:search]) %>
 <%= submit_tag "Search", name: nil %>
 <% end %>

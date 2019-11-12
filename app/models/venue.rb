@@ -8,4 +8,8 @@ class Venue < ApplicationRecord
     def self.search(search)
         Venue.where("capacity > ?", search)
     end
+
+    def featured_venue
+        self.events.max_by{|event| event.reviews.count}
+    end
 end
