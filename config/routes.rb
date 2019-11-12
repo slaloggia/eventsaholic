@@ -6,7 +6,4 @@ Rails.application.routes.draw do
   resources :vendors, only: [:index, :show]
   resources :reviews, only: [:create]
   resources :event_vendors, only: [:create]
-
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
