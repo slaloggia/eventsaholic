@@ -29,4 +29,6 @@ class Venue < ApplicationRecord
         self.events.limit(10)
     end
 
+    
+      
 end
