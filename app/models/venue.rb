@@ -29,6 +29,10 @@ class Venue < ApplicationRecord
         self.events.limit(10)
     end
 
+    def all_events
+        self.events
+    end
+
     
       
 end
