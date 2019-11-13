@@ -1,7 +1,12 @@
 class ReviewsController < ApplicationController
 
+    def new
+        @review = Review.new
+    end
+
     def create
         @review = Review.create(review_params)
+        redirect_to event_reviews_path(params[:event_id])
     end
 
     def index
