@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#delete'
-  post 'events/:id/add-vendors', to: 'events#add_vendors'
-  resources :events
+  resources :events do
+    resources :reviews, only: [:index, :create]
+  end
   resources :venues
   resources :clients
   resources :vendors, only: [:index, :show]

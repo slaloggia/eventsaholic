@@ -1,0 +1,19 @@
+<h1><%= @event.title %></h1>
+
+<h3>Create Review:</h3>
+<%= form_for([@event, @event.reviews.build])do |f| %>
+<%= f.hidden_field :event_id, value: @event.id %>
+<%= f.label :title %>
+<%= f.text_field :title %> <br>
+<%= f.label :content %> <br>
+<%= f.text_area :content %> <br>
+<%= f.submit "Create Review" %>
+<% end %>
+
+
+<p>Reviews:</p>
+<% @event.reviews.each do |review| %>
+    <h3><%= review.title %></h3>
+    <p>Content: <%= review.content %></p>
+    <br>
+<% end %>

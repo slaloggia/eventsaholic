@@ -8,4 +8,9 @@ class Event < ApplicationRecord
     has_many :vendors, through: :event_vendors
     validates :title, presence: true
     accepts_nested_attributes_for :event_vendors
+
+
+    def latest_reviews
+        self.reviews.limit(5)
+    end
 end
