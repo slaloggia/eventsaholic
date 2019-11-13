@@ -1,0 +1,11 @@
+<%= form_for @event do |f| %>
+        <%= f.label "Catering" %>
+        <%= f.collection_select :first_vendor_id, Vendor.cater, :id, :name, include_blank: true %><br>
+
+        <%= f.label "Music" %>
+        <%= f.collection_select :second_vendor_id, Vendor.music, :id, :name, include_blank: true %><br>
+
+        <%= f.label "Decor" %>
+        <%= f.collection_select :third_vendor_id, Vendor.decor, :id, :name, include_blank: true %><br>
+<%= f.submit "Add Vendors" %>
+<% end %>
