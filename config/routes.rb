@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#delete'
+  post 'events/:id/add-vendors', to: 'events#add_vendors'
   resources :events
   resources :venues
   resources :clients

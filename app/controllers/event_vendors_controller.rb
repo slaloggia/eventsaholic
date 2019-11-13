@@ -8,6 +8,6 @@ class EventVendorsController < ApplicationController
     private
 
     def event_vendor_params
-        params.require(:event_vendor).permit(:vendor_id, :event_id)
+        params.require(:event_vendor).permit(:vendors[:vendor_id], :event_id)
     end
 end
