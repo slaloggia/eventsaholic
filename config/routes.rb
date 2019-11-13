@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#delete'
-  resources :events
+  resources :events do
+    resources :reviews, only: [:index]
+  end
   resources :venues
   resources :clients
   resources :vendors, only: [:index, :show]
