@@ -6,16 +6,15 @@ class ClientsController < ApplicationController
   end
 
   def new
+    @client = Client.new
   end
 
   def create
-    puts 'something'
     @client = Client.new(client_params)
     if @client.valid?
       @client.save
       redirect_to client_path(@client)
     else
-      # flash[:notice] = "All fields required. Username must be unique"
       flash[:errors] = @client.errors.full_messages
       redirect_to new_client_path
     end
