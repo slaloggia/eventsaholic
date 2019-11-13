@@ -1,14 +1,11 @@
 class SessionsController < ApplicationController
+  
   def new
   end
 
   def create
     @client = Client.find_by(username: params[:username])
-    if @client && @client.authenticate(params[:password])
-      login_success
-    else
-      login_failure
-    end
+    @client && @client.authenticate(params[:password]) ? login_success : login_failure
   end
 
   def delete
@@ -19,13 +16,13 @@ class SessionsController < ApplicationController
   private
 
   def login_success
-    @client = Client.find_by(username: params[:username])
     session[:client_id] = @client.id
     redirect_to client_path(@client)
   end
 
   def login_failure
-    redirect_to login_path, notice: "Incorrect username or password"
+    flash[:notice] = "Incorrect username and/or password"
+    redirect_to login_path
   end
 
 end

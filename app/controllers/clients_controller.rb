@@ -1,25 +1,36 @@
 class ClientsController < ApplicationController
   before_action :find_client, only: [:show, :edit, :update, :destroy]
-  before_action :authorize
+  before_action :authorize, except: [:new, :create]
 
   def show
   end
 
   def new
-    @client = Client.new
   end
 
   def create
-    @client = Client.create(client_params)
-    redirect_to login_path
+    puts 'something'
+    @client = Client.new(client_params)
+    if @client.valid?
+      @client.save
+      redirect_to client_path(@client)
+    else
+      # flash[:notice] = "All fields required. Username must be unique"
+      flash[:errors] = @client.errors.full_messages
+      redirect_to new_client_path
+    end
   end
 
   def edit
   end
   
   def update
-    @client = Client.create(client_params)
-    redirect_to client_path(@client)
+    if @client.update(client_params)
+      redirect_to client_path(@client)
+    else
+      flash[:errors] = @client.errors.full_messages
+      redirect_to edit_client_path(@client)
+    end
   end
 
   def destroy
