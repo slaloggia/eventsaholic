@@ -14,5 +14,6 @@
 <p>Reviews:</p>
 <% @event.reviews.each do |review| %>
     <h3><%= review.title %></h3>
-    <p><%= review.content %></p>
+    <p>Content: <%= review.content %></p>
+    <br>
 <% end %>
