@@ -13,6 +13,14 @@
 
 <%= link_to "Book an Event", new_event_path %>
 
+<h3>Reviews: </h3>
+<% @venue.all_events.each do |event| %>
+    <% event.reviews.each do |review|%>
+    <p>Title: <%= review.title %></p>
+    <p>Content: <%= review.content %></p>
+    <% end %>
+<% end %>
+
 
 
 
