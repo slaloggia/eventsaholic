@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
   before_action :find_client, only: [:show, :edit, :update, :destroy]
+  before_action :authorize
 
   def show
   end
