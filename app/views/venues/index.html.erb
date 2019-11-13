@@ -25,6 +25,12 @@
 
 <%= form_tag(venues_path, method: :get) do %>
 <p>Search venue by capacity: </p>
-<%= text_field_tag(:search, params[:search]) %>
+<%= text_field_tag :search %>
 <%= submit_tag "Search", name: nil %>
+<% end %>
+
+<% @venues.each do |venue|%>
+<ul>
+<li><%= venue.name %></li>
+</ul>
 <% end %>

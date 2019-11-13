@@ -13,7 +13,8 @@
 
 <p>Reviews:</p>
 
-<%= @event_reviews.each do |review| %>
+<% @event_reviews.each do |review| %>
     <h3><%= review.title %></h3>
     <p><%= review.content %></p>
+    <br>
 <% end %>
