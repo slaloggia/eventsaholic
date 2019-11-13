@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-before_action :set_event, only: [:show, :edit, :update, :add_vendors]
+before_action :set_event, only: [:show, :edit, :update, :add_vendors, :destroy]
 
     def new
         @event = Event.new
@@ -28,6 +28,11 @@ before_action :set_event, only: [:show, :edit, :update, :add_vendors]
             flash[:errors] = @event.errors.full_messages
             redirect_to edit_event_path
         end
+    end
+
+    def destroy
+        @event.delete
+        redirect_to root_path
     end
 
     private

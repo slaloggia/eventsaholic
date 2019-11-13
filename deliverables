@@ -19,3 +19,8 @@ Events
     - Show page w/ review form, photos(?)
     - form partial for creation/update(available to logged-in client)/delete
     - new event request page(?)
+
+Rstrict access
+    - must be logged in to book event
+    - Client show page only viewable by that client
+    - Event edit page only accessable to client who created event

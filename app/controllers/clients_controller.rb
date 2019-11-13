@@ -10,7 +10,6 @@ class ClientsController < ApplicationController
   end
 
   def create
-    puts 'something'
     @client = Client.new(client_params)
     if @client.valid?
       @client.save
