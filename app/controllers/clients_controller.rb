@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  before_action :find_client, only: [:show, :edit, :update]
+  before_action :find_client, only: [:show, :edit, :update, :destroy]
 
   def show
   end
@@ -22,8 +22,8 @@ class ClientsController < ApplicationController
   end
 
   def destroy
-    find_client.destroy
-    redirect_to root
+    @client.destroy
+    redirect_to root_path
   end
 
   private
