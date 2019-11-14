@@ -6,7 +6,7 @@ class VenuesController < ApplicationController
         if params[:search]
             @venues = Venue.search(params[:search])
         else
-            @venues = Venue.all
+            @venues = []
         end
     end
 

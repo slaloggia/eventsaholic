@@ -21,7 +21,7 @@
 <% end %>
 </ul>
 
-<p>Popular Venue: <%= @venue.featured_venue %> </p>
+<p>Popular Venue: <%= link_to Venue.featured_venue.name, venue_path(Venue.featured_venue)%> </p>
 
 <%= form_tag(venues_path, method: :get) do %>
 <p>Search venue by capacity: </p>
