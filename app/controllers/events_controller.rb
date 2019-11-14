@@ -19,6 +19,7 @@ before_action :set_event, only: [:show, :edit, :update, :add_vendors, :destroy]
     end
 
     def edit
+        redirect_to @event unless current_client.id == @event.client_id
     end
 
     def update

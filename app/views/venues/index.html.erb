@@ -2,26 +2,26 @@
 
 <h3>Venues in Logan Square:</h3>
 <ul>
-<% Venue.logan.each do |venue| %>
+<% @venues.logan.each do |venue| %>
 <li><%= link_to venue.name, venue_path(venue) %></li>
 <% end %>
 </ul>
 
 <h3>Venues in River North:</h3>
 <ul>
-<% Venue.river.each do |venue| %>
+<% @venues.river.each do |venue| %>
 <li><%= link_to venue.name, venue_path(venue) %></li>
 <% end %>
 </ul>
 
 <h3>Venues in West Side:</h3>
 <ul>
-<% Venue.west.each do |venue| %>
+<% @venues.west.each do |venue| %>
 <li><%= link_to venue.name, venue_path(venue) %></li>
 <% end %>
 </ul>
 
-<p>Popular Venue: <%= @venue.featured_venue %> </p>
+<p>Popular Venue: <%# @venue.featured_venue %> </p>
 
 <%= form_tag(venues_path, method: :get) do %>
 <p>Search venue by capacity: </p>

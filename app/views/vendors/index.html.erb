@@ -1,8 +1,21 @@
 <h1>Vendors</h1>
 <br>
-<%# search by category %>
 
-<% @vendors.each do |vendor| %>
+<h2>Catering</h2>
+<% @vendors.cater.each do |vendor| %>
 <%= link_to vendor.name, vendor %><br>
 <% end %>
+<br>
+<h2>Music</h2>
+<% @vendors.music.each do |vendor| %>
+<%= link_to vendor.name, vendor %><br>
+<% end %>
+<br>
+<h2>Decoration</h2>
+<% @vendors.decor.each do |vendor| %>
+<%= link_to vendor.name, vendor %><br>
+<% end %>
+<br>
+
+<%= link_to "Book an Event", new_event_path %>
 
