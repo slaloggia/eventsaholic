@@ -6,7 +6,11 @@ class Venue < ApplicationRecord
 
 
     def self.search(search)
-        Venue.where("capacity > ?", search)
+        if search
+         self.where("capacity > ?", search)
+        else
+            self.all 
+        end
     end
 
     def self.featured_venue

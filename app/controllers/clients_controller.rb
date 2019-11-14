@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  before_action :find_client, only: [:show, :edit, :update, :destroy]
+  before_action :find_client, except: [:new, :create, :upcoming_events, :past_events]
   before_action :authorize, except: [:new, :create]
 
   def show
@@ -15,7 +15,6 @@ class ClientsController < ApplicationController
       @client.save
       redirect_to client_path(@client)
     else
-      # flash[:notice] = "All fields required. Username must be unique"
       flash[:errors] = @client.errors.full_messages
       redirect_to new_client_path
     end
@@ -36,6 +35,14 @@ class ClientsController < ApplicationController
   def destroy
     @client.destroy
     redirect_to root_path
+  end
+
+  def upcoming_events
+    @client = current_client
+  end
+
+  def past_events
+    @client = current_client
   end
 
   private
