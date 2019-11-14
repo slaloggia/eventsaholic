@@ -7,6 +7,7 @@ class VenuesController < ApplicationController
     end
 
     def show
+        render :layout => 'venues/show'
     end
 
 
