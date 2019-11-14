@@ -1,11 +1,12 @@
-<% if @venue.venue_type == "Bar" %>
-    <%= image_tag "bar_background.jpeg", class:"venue_background" %>
-<%elsif @venue.venue_type == "Restaurant" %>
-    <%= image_tag "restaurant_background.jpg", class:"venue_background" %>
-<%else%>
-    <%= image_tag "club_background.jpg", class:"venue_background" %>
-<% end %><br>
 <%= image_tag @venue.logo, class:"venue_logo" %>
+
+<% if @venue.venue_type == "Bar" %>
+    <div class="venue_background1" %>
+<%elsif @venue.venue_type == "Restaurant" %>
+    <div class="venue_background2" %>
+<%else%>
+    <div class="venue_background3">
+<% end %><br>
 
 
 <p>Type: <%= @venue.venue_type %></p>
@@ -30,6 +31,6 @@
     <% end %>
 <% end %>
 
-
+</div>
 
 
