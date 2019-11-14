@@ -1,12 +1,4 @@
 
-<% if @venue.venue_type == "Bar" %>
-    <div class="venue_background1" %></div>
-<%elsif @venue.venue_type == "Restaurant" %>
-    <div class="venue_background2" %></div>
-<%else%>
-    <div class="venue_background3"></div>
-<% end %><br>
-
 <%= image_tag @venue.logo, class:"venue_logo" %>
 
 <p>Type: <%= @venue.venue_type %></p>
@@ -21,7 +13,6 @@
     <% end %>
     </ul>
 
-<%= link_to "Book an Event", new_event_path %>
 
 <h3>Reviews: </h3>
 <% @venue.all_events.each do |event| %>
