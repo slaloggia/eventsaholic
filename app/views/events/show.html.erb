@@ -1,7 +1,7 @@
 <h1><%= @event.title  %></h1>
 <p>Status: <%= @event.approved ? "Booked" : "Pending Approval" %>
 <p><%= @event.date %></p>
-<p>Host: <%= @event.client.username %></p>
+<p>Host: <%= @event.client.first_name + ' ' + @event.client.last_name %></p>
 <p>Venue: <%= @event.venue.name %></p>
 <p>Occasion: <%= @event.event_type %></p>
 <% @event.vendors.each do |vendor| %>
