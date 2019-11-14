@@ -1,8 +1,8 @@
 class ClientsController < ApplicationController
-  before_action :find_client, except: [:new, :create, :upcoming_events, :past_events]
+  before_action :find_client, except: [:new, :create]
   before_action :authorize, except: [:new, :create]
-
-  def show    
+  
+  def show
   end
 
   def new
@@ -48,7 +48,6 @@ class ClientsController < ApplicationController
   def find_client
     if check_id(params[:id])
       @client = Client.find(params[:id])
-      render :show
     else
       redirect_to client_path(current_client)
     end
