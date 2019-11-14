@@ -7,3 +7,14 @@
     width: 200px;
     background-color: black;
 }
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
