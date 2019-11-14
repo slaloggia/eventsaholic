@@ -1,13 +1,13 @@
-<%= image_tag @venue.logo, class:"venue_logo" %>
 
 <% if @venue.venue_type == "Bar" %>
-    <div class="venue_background1" %>
+    <div class="venue_background1" %></div>
 <%elsif @venue.venue_type == "Restaurant" %>
-    <div class="venue_background2" %>
+    <div class="venue_background2" %></div>
 <%else%>
-    <div class="venue_background3">
+    <div class="venue_background3"></div>
 <% end %><br>
 
+<%= image_tag @venue.logo, class:"venue_logo" %>
 
 <p>Type: <%= @venue.venue_type %></p>
 <p>Capacity: <%= @venue.capacity %></p>
@@ -31,6 +31,6 @@
     <% end %>
 <% end %>
 
-</div>
+
 
 
