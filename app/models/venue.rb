@@ -14,7 +14,7 @@ class Venue < ApplicationRecord
     end
 
     def self.featured_venue
-        self.events.max_by{|event| event.reviews.count}
+        self.all.max_by{|venue| venue.events.count}
     end
 
     def self.logan

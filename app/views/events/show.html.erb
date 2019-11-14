@@ -15,7 +15,7 @@
 <h3>Latest Reviews: </h3>
 <% @event.latest_reviews.each do |review| %>
 <h4><%= review.title %></h4>
-<p>"<%=review.content %>"</p>
+<p><%=review.content %></p>
 <% end %>
 
 <%= link_to "See all reviews", event_reviews_path(@event) %>

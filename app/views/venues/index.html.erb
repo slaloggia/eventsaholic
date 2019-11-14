@@ -1,4 +1,4 @@
-<h1>Featured Venues</h1>
+<h2>Featured Venue: <%= link_to Venue.featured_venue.name, venue_path(Venue.featured_venue)%> </h2>
 
 <h3>Venues in Logan Square:</h3>
 <ul>
@@ -21,10 +21,9 @@
 <% end %>
 </ul>
 
-<p>Popular Venue: <%# @venue.featured_venue %> </p>
 
 <%= form_tag(venues_path, method: :get) do %>
 <p>Search venue by capacity: </p>
-<%= text_field_tag(:search, params[:search]) %>
+<%= text_field_tag :search %>
 <%= submit_tag "Search", name: nil %>
 <% end %>

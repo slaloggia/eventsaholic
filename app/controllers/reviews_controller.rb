@@ -11,6 +11,9 @@ class ReviewsController < ApplicationController
 
     def index
         @event = Event.find(params[:event_id])
+        @event_reviews = @event.reviews
+        @review = Review.new(event_id: @event.id)
+        
     end
 
     private
