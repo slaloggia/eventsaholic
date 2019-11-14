@@ -38,8 +38,8 @@ Vendor.create(name: "A Posh Production", category: 'Decor')
 Vendor.create(name: "Art Of Imagination", category: "Decor")
 Vendor.create(name: "Revel Decor", category: "Decor")
 
-Event.create(title:"Rosemarie's Wedding" , client_id: 1, venue_id: 5, event_type:"wedding" , date: 25/05/2020 )
-Event.create(title:"Dan's Bachellor Party" , client_id: 5, venue_id: 10, event_type:"bachellor party" , date: 15/02/2020, approved: true)
-Event.create(title:"Rina's Birthday Party" , client_id: 9, venue_id: 8, event_type:"birthday party" , date: 21/01/2020, approved: true )
+Event.create(title:"Rosemarie's Wedding" , client_id: 1, venue_id: 5, event_type:"wedding" , date: Date.new(2019, 07, 20) )
+Event.create(title:"Dan's Bachellor Party" , client_id: 5, venue_id: 10, event_type:"bachellor party" , date: Date.new(2020, 03, 14), approved: true)
+Event.create(title:"Rina's Birthday Party" , client_id: 9, venue_id: 8, event_type:"birthday party" , date: Date.new(2019, 10, 31), approved: true )
 
 puts "SEEDED"

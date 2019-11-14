@@ -1,5 +1,5 @@
 <% if flash[:notice] %>
-  <%= flash[:notice] %>
+  <b>***<%= flash[:notice] %>***</b><br>
 <% end %>
 
 <%= form_with model: @client do |f| %>
