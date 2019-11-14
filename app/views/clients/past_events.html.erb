@@ -1,0 +1,5 @@
+<h1>Your Past Events</h1>
+
+<% @client.past_events.each do |event| %>
+  <%= link_to(event.title, event_path(event)) %><br>
+  <% end %>

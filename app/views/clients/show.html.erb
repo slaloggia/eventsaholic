@@ -1,8 +1,10 @@
 <h1><%= "Hello, #{@client.first_name}!" %></h1>
 
-<p><%= link_to('Request an Event', new_event_path) %></p>
-<p><%= link_to('Edit Profile', edit_client_path(@client)) %></p>
+<p><%= link_to('Upcoming Events', client_upcoming_events_path(@client)) %></p>
+<p><%= link_to('Past Events', client_past_events_path(@client)) %></p>
+<p><%= link_to('Book an Event', new_event_path) %></p>
 <p><%= link_to('See All Venues', venues_path) %></p>
 <p><%= link_to('See All Vendors', vendors_path) %></p>
 
+<%= button_to('Edit Profile', edit_client_path(@client), method: :get) %>
 <%= button_to('Logout', logout_path, method: :delete) %>
