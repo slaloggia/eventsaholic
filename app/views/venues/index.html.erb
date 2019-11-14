@@ -1,25 +1,33 @@
 <h2>Featured Venue: <%= link_to Venue.featured_venue.name, venue_path(Venue.featured_venue)%> </h2>
 
-<h3>Venues in Logan Square:</h3>
-<ul>
-<% @venues.logan.each do |venue| %>
-<li><%= link_to venue.name, venue_path(venue) %></li>
-<% end %>
-</ul>
+<div class="row">   
+    <div class="column">
+        <h3>Venues in Logan Square:</h3>
+        <ul>
+        <% Venue.logan.each do |venue| %>
+        <li><%= link_to venue.name, venue_path(venue) %></li>
+        <% end %>
+        </ul>
+    </div>
 
-<h3>Venues in River North:</h3>
-<ul>
-<% @venues.river.each do |venue| %>
-<li><%= link_to venue.name, venue_path(venue) %></li>
-<% end %>
-</ul>
+    <div class="column">
+        <h3>Venues in River North:</h3>
+        <ul>
+        <% Venue.river.each do |venue| %>
+        <li><%= link_to venue.name, venue_path(venue) %></li>
+        <% end %>
+        </ul>
+    </div>
 
-<h3>Venues in West Side:</h3>
-<ul>
-<% @venues.west.each do |venue| %>
-<li><%= link_to venue.name, venue_path(venue) %></li>
-<% end %>
-</ul>
+    <div class="column">
+        <h3>Venues in West Side:</h3>
+        <ul>
+        <% Venue.west.each do |venue| %>
+        <li><%= link_to venue.name, venue_path(venue) %></li>
+        <% end %>
+        </ul>
+    </div>
+</div>
 
 
 <%= form_tag(venues_path, method: :get) do %>
