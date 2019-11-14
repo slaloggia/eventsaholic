@@ -1,4 +1,13 @@
-<h1><%= @venue.name %></h1>
+<% if @venue.venue_type == "Bar" %>
+    <%= image_tag "bar_background.jpeg", class:"venue_background" %>
+<%elsif @venue.venue_type == "Restaurant" %>
+    <%= image_tag "restaurant_background.jpg", class:"venue_background" %>
+<%else%>
+    <%= image_tag "club_background.jpg", class:"venue_background" %>
+<% end %><br>
+<%= image_tag @venue.logo, class:"venue_logo" %>
+
+
 <p>Type: <%= @venue.venue_type %></p>
 <p>Capacity: <%= @venue.capacity %></p>
 <p>Location: <%= @venue.location %></p> 

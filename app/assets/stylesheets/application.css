@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+/******LAYOUT******/
+.banner {
+    background-image: url("chicago_fireworks");
+    background-position: center;
+    background-size: cover;
+    height: 310px;
+    background-repeat: no-repeat;
+    color: lightsteelblue;
+    text-align: center;
+    font-family: cursive;
+    
+}
+
+#venue .banner {
+    display: none;
+}
+
+.navbar{
+    background-color: #2d004d;
+    padding: 10px;
+   
+
+}
+.nav_link {
+    padding: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+
+.menu_bar {
+    text-align: center;
+    height: 50px;
+    background-color: #2d004d;
+}
+
+
+.menu_link {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 30px;
+}
+
+.venue_logo {
+    padding: 10px
+}
+
