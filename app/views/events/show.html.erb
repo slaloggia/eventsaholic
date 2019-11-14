@@ -8,8 +8,9 @@
 <p><%= vendor.category %> provided by: <%= vendor.name %></p>
 <% end %>
 
-
+<% if current_client.id == @event.client_id %>
 <%= link_to "Edit Event", edit_event_path %>
+<% end %>
 
 <h3>Latest Reviews: </h3>
 <% @event.latest_reviews.each do |review| %>

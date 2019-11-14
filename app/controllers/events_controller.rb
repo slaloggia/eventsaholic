@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-before_action :set_event, only: [:show, :edit, :update, :add_vendors]
 before_action :authorize, except: :show
+before_action :set_event, only: [:show, :edit, :update, :add_vendors, :destroy]
 
     def new
         @event = Event.new
@@ -20,6 +20,7 @@ before_action :authorize, except: :show
     end
 
     def edit
+        redirect_to @event unless current_client.id == @event.client_id
     end
 
     def update
@@ -29,6 +30,11 @@ before_action :authorize, except: :show
             flash[:errors] = @event.errors.full_messages
             redirect_to edit_event_path
         end
+    end
+
+    def destroy
+        @event.delete
+        redirect_to root_path
     end
 
     private
