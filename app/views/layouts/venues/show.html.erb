@@ -19,13 +19,13 @@
   <%= link_to "Home", root_path, class: "nav_link" %> <%= link_to "Sign Up", new_client_path, class: "nav_link" %>   <%= link_to "Log In", login_path, class: "nav_link" %>
   </div>
 
-<% if @venue.venue_type == "Bar" %>
-    <div class="venue_background1" %>
-<%elsif @venue.venue_type == "Restaurant" %>
-    <div class="venue_background2" %>
-<%else%>
-    <div class="venue_background3">
-<% end %><br>
+    <% if @venue.venue_type == "Bar" %>
+        <div class="venue_background1" ></div>
+    <%elsif @venue.venue_type == "Restaurant" %>
+        <div class="venue_background2" ></div>
+    <%else%>
+        <div class="venue_background3"></div>
+    <% end %>
 
   <div class='menu_bar'>
   <%= link_to "Browse Venues", venues_path, class: "menu_link" %>
@@ -34,9 +34,8 @@
   <% if current_client %>
     <%= link_to "Client Page", client_path(current_client), class: "menu_link" %>
   <% end %>
-
   </div>
-
+<br>
     <%= yield %>
 
   <div class='footer'>

@@ -18,7 +18,7 @@
     background-image: url("chicago_fireworks");
     background-position: center;
     background-size: cover;
-    height: 310px;
+    height: 400px;
     background-repeat: no-repeat;
     color: lightsteelblue;
     text-align: center;
@@ -31,7 +31,7 @@
 }
 
 .navbar{
-    background-color: #2d004d;
+    background-color: #121254;
     padding: 10px;
    
 
@@ -46,7 +46,7 @@
 .menu_bar {
     text-align: center;
     height: 50px;
-    background-color: #2d004d;
+    background-color: #121254;
 }
 
 
