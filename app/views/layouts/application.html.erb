@@ -4,12 +4,31 @@
     <title>Eventsaholic</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <style>
+    
+    </style>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <div class='navbar'>
+  <%= link_to "Home", root_path, class: "nav_link" %> <%= link_to "Sign Up", new_client_path, class: "nav_link" %>   <%= link_to "Log In", login_path, class: "nav_link" %>
+  </div>
+  <div class='banner'>
+  <br>
+    <h1 style= "font-size: 55px">Eventsaholic</h1>
+    <h3 style= "font-size: 25px">Chicago's event planner</h3>
+  </div>
+  <div class='menu_bar'>
+  <%= link_to "Browse Venues", venues_path, class: "menu_link" %>
+  <%= link_to "Browse Vendors", vendors_path, class: "menu_link" %>
+  <%= link_to "Book Event", new_event_path, class: "menu_link" %>
+  <%= link_to "Client Page", client_path(current_client.id), class: "menu_link" %>
+
+  </div>
+
     <%= yield %>
   </body>
 </html>
