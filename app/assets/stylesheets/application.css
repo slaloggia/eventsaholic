@@ -94,3 +94,7 @@
     position: relative;
     bottom: 0;
 }
+
+.page_view {
+    padding: 50px;
+}
