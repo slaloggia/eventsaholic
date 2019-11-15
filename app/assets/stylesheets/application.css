@@ -26,6 +26,12 @@
     
 }
 
+.welcome {
+    color: #2b506e;
+    font-family: cursive;
+    text-align: center;
+}
+
 #venue .banner {
     display: none;
 }
