@@ -24,17 +24,16 @@ input[type=text] {
     font-size: 20px;
   }
 
-.login_button {
-  font-size: 15px;
-  padding: 3px 13px
-}
+
 
 .login_form {
   text-align: center;
-
+  position: relative;
+  right: 50px;
 }
 
 .profile_picture {
-
   width: 150px;
+  position: relative;
+  left: 10px;
 }

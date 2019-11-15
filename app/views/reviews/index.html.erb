@@ -14,7 +14,9 @@
 <p>Reviews:</p>
 
 <% @event_reviews.each do |review| %>
+<div class="shadow-lg p-3 mb-5 bg-lightgrey rounded">
     <h3><%= review.title %></h3>
     <p><%= review.content %></p>
-    <br>
+    </div>
+    
 <% end %>

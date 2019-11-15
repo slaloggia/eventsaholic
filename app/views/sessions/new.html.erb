@@ -3,6 +3,7 @@
   <b>***<%= flash[:notice] %>***</b><br>
 <% end %>
 <%= image_tag 'profile_picture', class: 'profile_picture'%>
+<br><br>
 <%= form_with model: @client do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %><br>
@@ -12,6 +13,7 @@
   <%= f.password_field :password %><br>
   <br>
 
-  <%= f.submit "Log In", class: "login_button" %>
+  <%= f.submit "Log In", class:'btn submit' %>
 <% end %>
+<br><br>
 </div>

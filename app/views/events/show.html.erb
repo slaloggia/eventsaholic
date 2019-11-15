@@ -11,11 +11,13 @@
 <% if current_client && current_client.id == @event.client_id %>
 <%= link_to "Edit Event", edit_event_path %>
 <% end %>
-
+<br>
 <h3>Latest Reviews: </h3>
 <% @event.latest_reviews.each do |review| %>
-<h4><%= review.title %></h4>
-<p><%=review.content %></p>
+    <div class="shadow-lg p-3 mb-5 bg-lightgrey rounded">
+        <h4><%= review.title %></h4>
+        <p><%=review.content %></p>
+    <div>
 <% end %>
 
 <%= link_to "See all reviews", event_reviews_path(@event) %>

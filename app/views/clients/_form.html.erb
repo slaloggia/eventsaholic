@@ -3,25 +3,59 @@
       <b>***<%= error %>***</b><br>
     <% end %>
 <% end %>
-
 <%= form_with model: @client do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %><br>
-  
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %><br>
+<div class="container">
+  <div class="panel-body">
+    <form role="form">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <%= f.label :first_name %>
+              <%= f.text_field :first_name %><br>
+            </div>
+          </div>
+          
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <%= f.label :last_name %>
+              <%= f.text_field :last_name %><br>
+            </div>
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <div class="form-group">
+            <%= f.label :location %>
+            <%= f.text_field :location %><br>
+          </div>
+        </div>
+      
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <div class="form-group">
+            <%= f.label :username %>
+            <%= f.text_field :username %><br>
+          </div>
+        </div>
+      </div>
 
-  <%= f.label :location %>
-  <%= f.text_field :location %><br>
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <div class="form-group">
+          <%= f.label :password %>
+          <%= f.password_field :password %><br>
+          </div>
+        </div>
 
-  <%= f.label :username %>
-  <%= f.text_field :username %><br>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <%= f.label :password_confirmation %>
+              <%= f.password_field :password_confirmation %><br>
+            </div>
+          </div>
+        </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %><br>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %><br>
-
-  <%= f.submit "Submit", class:'form_submit_button' %>
-<% end %>
+      <%= f.submit "Submit", class:"btn btn-info btn-lg" %>
+    <% end %>
+  </div>
+  </form>
+</div>

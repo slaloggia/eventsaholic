@@ -1,3 +1,11 @@
+
 <h1><%= @vendor.name %></h1>
-Category: <%= @vendor.category %><br>
+Category: <%= @vendor.category %><br><br>
 Recent Events:
+<% if @vendor.name == "Ezcater" %>
+<div class="row">
+<div class="col-sm-4 mb20"><img class="img-fluid m-x-auto d-block img-responsive" src="http://twelvebasketscatering.com/wp-content/uploads/2018/12/Vey-182108-80.jpg" alt=""></div>
+<div class="col-sm-4 mb20"><img class="img-fluid m-x-auto d-block img-responsive" src="https://tastefuldinners.com/wp-content/uploads/2016/08/Catering-01.jpg" alt=""></div>
+<div class="col-sm-4 mb20"><img class="img-fluid m-x-auto d-block img-responsive" src="https://dinebydesign.net/wp-content/uploads/2019/04/1015161612-1-4.jpg" alt=""></div>
+</div>
+<% end %>
