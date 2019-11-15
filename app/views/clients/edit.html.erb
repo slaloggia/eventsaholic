@@ -1,15 +1,8 @@
 <div class='client_form'>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <h1>Edit Profile</h1>
 
 <%= render 'form'%>
-
-<button>
-<%= link_to('Delete Account', client_path(@client), method: :delete) %>
-</button>
+<br>
+<%= link_to('Delete Account', client_path(@client), method: :delete, class:'btn btn-danger') %>
 </div>
