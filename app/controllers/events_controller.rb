@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 before_action :authorize, except: :show
-before_action :set_event, only: [:show, :edit, :update, :add_vendors, :destroy]
+before_action :set_event, except: [:new, :create]
 
     def new
         @event = Event.new

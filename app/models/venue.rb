@@ -4,10 +4,9 @@ class Venue < ApplicationRecord
     has_many :vendors, through: :events
     has_many :reviews, through: :events
 
-
     def self.search(search)
         if search
-         self.where("capacity > ?", search)
+            self.where("capacity > ?", search)
         else
             self.all 
         end
@@ -37,6 +36,4 @@ class Venue < ApplicationRecord
         self.events
     end
 
-    
-      
 end
