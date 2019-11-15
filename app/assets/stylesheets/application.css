@@ -65,3 +65,23 @@
 .row {
     text-align: center
 }
+
+.review_content {
+    border-radius: 25px;
+    background-color: lightgrey;
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    box-shadow: 5px 5px 2px darkgrey;
+}
+
+.buffer {
+    height: 60px;
+}
+
+.footer {
+    background-color: #eaeafb;
+    height: 40px;
+    color: grey;
+    padding: 5px;
+}

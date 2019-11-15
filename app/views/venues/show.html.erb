@@ -17,8 +17,10 @@
 <h3>Reviews: </h3>
 <% @venue.all_events.each do |event| %>
     <% event.reviews.each do |review|%>
-    <p>Title: <%= review.title %></p>
-    <p>Content: <%= review.content %></p>
+    <p><b><%= review.title %></b></p>
+    <div class='review_content'>
+    <p><%=   review.content %></p>
+    </div>
     <% end %>
 <% end %>
 
