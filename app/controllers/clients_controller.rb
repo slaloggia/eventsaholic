@@ -1,6 +1,6 @@
 class ClientsController < ApplicationController
-  before_action :find_client, except: [:new, :create]
   before_action :authorize, except: [:new, :create]
+  before_action :find_client, except: [:new, :create]
   
   def show
   end
