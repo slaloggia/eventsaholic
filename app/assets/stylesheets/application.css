@@ -82,6 +82,9 @@
 .footer {
     background-color: #eaeafb;
     height: 40px;
+    width: 100%;
     color: grey;
     padding: 5px;
+    position: fixed;
+    bottom: 0;
 }

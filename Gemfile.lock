@@ -114,13 +114,10 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
-<<<<<<< HEAD
     popper_js (1.14.5)
-=======
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
->>>>>>> navganj
     public_suffix (4.0.1)
     puma (4.3.0)
       nio4r (~> 2.0)
