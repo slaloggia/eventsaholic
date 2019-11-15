@@ -85,6 +85,6 @@
     width: 100%;
     color: grey;
     padding: 5px;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
