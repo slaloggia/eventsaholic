@@ -2,14 +2,12 @@ class VenuesController < ApplicationController
     before_action :find_venue, only: [:show]
 
     def index
-        # @venue = Venue.new
         @venues = Venue.search(params[:search])
     end
 
     def show
         render :layout => 'venues/show'
     end
-
 
     private
     
@@ -20,4 +18,5 @@ class VenuesController < ApplicationController
     def find_venue
         @venue = Venue.find(params[:id])
     end
+
 end
