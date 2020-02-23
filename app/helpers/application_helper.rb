@@ -9,9 +9,9 @@ module ApplicationHelper
   end
 
   def authorize
-    if !logged_in?
       flash[:notice] = "Please log in to continue!"
       redirect_to login_path
+      unless logged_in?
     end
   end
 

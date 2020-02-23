@@ -53,7 +53,7 @@ describe Client do
       new_client.save
       new_venue = Venue.new(name: 'vanue')
       new_venue.save
-      future_event = Event.new(title: 'new event', date: Date.new(2020, 1, 1), venue_id: 1, client_id: new_client.id)
+      future_event = Event.new(title: 'new event', date: Faker::Date.forward, venue_id: 1, client_id: new_client.id)
       future_event.save
 
       expect(new_client.upcoming_events).to include(future_event)
