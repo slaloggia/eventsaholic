@@ -8,6 +8,8 @@ describe VendorsController do
         end
 
         it { expect(response).to have_http_status(:ok) }
+        it { expect(page).to have_content("Catering") }
+        
     end
 
     describe "GET vendors#show" do
@@ -16,5 +18,6 @@ describe VendorsController do
             visit vendor_path(@vendor.id)
         end
         it { expect(response).to have_http_status(:ok) }
+        it { expect(page).to have_content(@vendor.name) }
     end
 end

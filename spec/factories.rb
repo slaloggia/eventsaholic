@@ -1,6 +1,6 @@
 FactoryBot.define do
     factory :random_vendor, class: Vendor do
-        name {Faker::Restaurant}
+        name {Faker::Restaurant.name}
         trait :catering do
             category {'Catering'}
         end
@@ -15,6 +15,7 @@ FactoryBot.define do
     factory :random_venue, class: Venue do
         name {Faker::JapaneseMedia::SwordArtOnline.location} 
         capacity {rand(20...200)}
+        logo {Faker::Avatar.image}
         trait :logan do
             location {'Logan Square'}
         end
